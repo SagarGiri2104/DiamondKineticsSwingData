@@ -29,24 +29,24 @@ public class SwingApplication {
 			ex.printStackTrace();
 		}
 
-		int operation1 = -1, operation2 = -1, operation3 = -1;
-		List<String> operation4 = new ArrayList<>();
+		int searchContinuityAboveValueOutput = -1, backSearchContinuityWithinRangeOutput = -1, searchContinuityAboveValueTwoSignalsOutput = -1;
+		List<String> searchMultiContinuityWithinRangeList = new ArrayList<>();
 		try{
-			operation1 = swingOperations.searchContinuityAboveValue(Column.AX,11,30,0,5);
+			searchContinuityAboveValueOutput = swingOperations.searchContinuityAboveValue(Column.AX,11,30,0,5);
 
-			operation2= swingOperations.backSearchContinuityWithinRange(Column.AX,30,11,0,5, 5);
+			backSearchContinuityWithinRangeOutput= swingOperations.backSearchContinuityWithinRange(Column.AX,30,11,0,5, 5);
 
-			operation3 = swingOperations.searchContinuityAboveValueTwoSignals(Column.AX,Column.AY,11,30,-0.30,0.5, 5);
+			searchContinuityAboveValueTwoSignalsOutput = swingOperations.searchContinuityAboveValueTwoSignals(Column.AX,Column.AY,11,30,-0.30,0.5, 5);
 
-			operation4 = swingOperations.searchMultiContinuityWithinRange(Column.AX,11,50,0,5, 5);
+			searchMultiContinuityWithinRangeList = swingOperations.searchMultiContinuityWithinRange(Column.AX,11,50,0,5, 5);
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
 			ex.printStackTrace();
 		} finally {
-			System.out.println(operation1);
-			System.out.println(operation2);
-			System.out.println(operation3);
-			System.out.println(operation4.toString());
+			System.out.println(searchContinuityAboveValueOutput);
+			System.out.println(backSearchContinuityWithinRangeOutput);
+			System.out.println(searchContinuityAboveValueTwoSignalsOutput);
+			System.out.println(searchMultiContinuityWithinRangeList.toString());
 		}
 
 
