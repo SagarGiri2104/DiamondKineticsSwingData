@@ -1,10 +1,8 @@
 # DiamondKineticsSwingData
 
 ## 1. Pre-requisites:
-IDE: SpringToolSuite4 must be downloaded and installed.
+IDE Used:  Intellij
 JDK 1.8v
-
-## to run the application:
 
 ## 2. Build & Run the project
 
