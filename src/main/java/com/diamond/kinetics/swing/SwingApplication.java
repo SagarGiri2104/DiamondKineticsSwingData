@@ -5,9 +5,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.core.io.Resource;
 
 @SpringBootApplication
 public class SwingApplication {
@@ -27,29 +25,28 @@ public class SwingApplication {
 			}
 
 			swingOperations = new SwingOperations(file);
-		//	SpringApplication.run(SwingApplication.class, args);
 		} catch(Exception ex){
 			ex.printStackTrace();
 		}
 
-		int s1 = -1, s2 = -1, s3 = -1;
-		List<String> s4 = new ArrayList<>();
+		int operation1 = -1, operation2 = -1, operation3 = -1;
+		List<String> operation4 = new ArrayList<>();
 		try{
-			s1 = swingOperations.searchContinuityAboveValue(Column.AX,11,30,0,5);
+			operation1 = swingOperations.searchContinuityAboveValue(Column.AX,11,30,0,5);
 
-			s2= swingOperations.backSearchContinuityWithinRange(Column.AX,30,11,0,5, 5);
+			operation2= swingOperations.backSearchContinuityWithinRange(Column.AX,30,11,0,5, 5);
 
-			s3 = swingOperations.searchContinuityAboveValueTwoSignals(Column.AX,Column.AY,11,30,-0.30,0.5, 5);
+			operation3 = swingOperations.searchContinuityAboveValueTwoSignals(Column.AX,Column.AY,11,30,-0.30,0.5, 5);
 
-			s4 = swingOperations.searchMultiContinuityWithinRange(Column.AX,11,50,0,5, 5);
+			operation4 = swingOperations.searchMultiContinuityWithinRange(Column.AX,11,50,0,5, 5);
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
 			ex.printStackTrace();
 		} finally {
-			System.out.println(s1);
-			System.out.println(s2);
-			System.out.println(s3);
-			System.out.println(s4.toString());
+			System.out.println(operation1);
+			System.out.println(operation2);
+			System.out.println(operation3);
+			System.out.println(operation4.toString());
 		}
 
 
